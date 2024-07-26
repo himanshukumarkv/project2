@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>CashFlow Compass: Navigating Financial Health</h1>
+  
+    <div class="input-section">
+        <h2>User Input</h2>
+        <form id="financeForm">
+            <div>
+                <label for="income">Income (₹):</label>
+                <input type="number" id="income" step="0.01" required>
+            </div>
+            <div>
+                <label for="education">Education Expenses (₹):</label>
+                <input type="number" id="education" step="0.01" required>
+            </div>
+            <div>
+                <label for="houseRent">House Rent and Electricity Bill (₹):</label>
+                <input type="number" id="houseRent" step="0.01" required>
+            </div>
+            <div>
+                <label for="transportCost">Total Transport Cost (₹):</label>
+                <input type="number" id="transportCost" step="0.01" required>
+            </div>
+            <div>
+                <label for="foodCost">Food Cost and Other Expenses (₹):</label>
+                <input type="number" id="foodCost" step="0.01" required>
+            </div>
+            <div>
+                <label for="extraCashflow">Extra Cashflow (₹):</label>
+                <input type="number" id="extraCashflow" step="0.01" required>
+            </div>
+            <button type="button" onclick="calculateFinancialHealth()">Calculate Financial Health</button>
+        </form>
+    </div>
+
+    <div class="data-section">
+        <h2>Financial Health Metrics</h2>
+        <div id="financialResults"></div>
+        <div class="charts">
+            <canvas id="cashInflowChart"></canvas>
+            <canvas id="cashOutflowChart"></canvas>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
+
